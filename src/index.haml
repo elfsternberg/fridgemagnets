@@ -1,0 +1,36 @@
+!!! 5
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{"http-equiv" => "Acesss-Control-Allow-Origin", :content => "*"}/
+    %title Fridge Magnets in HTML5
+    %link{:href => "style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "ui-lightness/jquery-ui-1.8.18.custom.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #board
+      #results
+    #footer
+      #stripe
+        #muteunmute(data-state='on')
+          %img(src="unmute.png")
+        %button(id="shuffler") Shuffle
+
+      %p#f1 
+        HTML5 implementation by <a href="http://elfsternberg.com">Elf M. Sternberg</a>.  You can see all our poems
+        <a href="https://twitter.com/#!/html5magnets">@html5magnets</a> on Twitter.
+      #f2 
+        %div
+          Comments and feedback to <a href="mailto:elf.sternberg@gmail.com">elf.sternberg@gmail.com</a> | inspired by <a href="http://twittermagnets.com/">twittermagents.com</a> and an allergic reaction to all things flash.</p>  
+          %p The music is <em><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Sound" property="dc:title" rel="dc:type">Ethereal Space</span></em> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ccmixter.org/files/snowflake/33318" property="cc:attributionName" rel="cc:attributionURL">snowflake</a> and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution (3.0)</a> license.
+        %div(style="clear:both")/
+
+    #message(style="display: none")
+      %p
+
+    %script{:src => "js/jquery-1.7.1.min.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-ui-1.8.18.custom.min.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-css-transform.js", :type => "text/javascript"}
+    %script{:src => "js/jquery-animate-css-rotate-scale.js", :type => "text/javascript"}
+    %script{:src => "js/buzz.js", :type => "text/javascript"}
+    %script{:src => "js/sat.js", :type => "text/javascript"}
+    %script{:src => "js/magnets.js", :type => "text/javascript"}

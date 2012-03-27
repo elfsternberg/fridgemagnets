@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+*#
+.#*
+*~
+js/magnets.js
+js/sat.js
+js/wordlist.js
+node_modules
+server/magnet_server.js
+index.html
+style.css
+private/

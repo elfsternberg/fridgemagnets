@@ -1,0 +1,15 @@
+{
+    "name": "FridgemagnetServer",
+    "description": "A Twitter Forwarding Serverour CLI formatting friend.",
+    "version": "0.0.1",
+    "author": "Elf M. Sternberg <elf@pendorwright.com>",
+    "dependencies": {
+        "coffee-script": "1.2.0",
+        "oauth": "0.9.6",
+        "express": "2.5.8",
+        "forever": "0.8.5",
+        "db-mysql": "0.7.6"
+    },
+  "main": "./magnet_server",
+  "engines": { "node": ">= 0.6.2" }
+}
