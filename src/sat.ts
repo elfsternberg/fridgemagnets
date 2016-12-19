@@ -113,7 +113,10 @@ var colliding = (shape1, shape2) => {
     return true;
 }
 
-        
+module.exports = {
+    Vector: Vector,
+    colliding: colliding
+}            
 
         
     

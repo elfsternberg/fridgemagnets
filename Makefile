@@ -2,6 +2,7 @@
 
 HAML=/usr/bin/haml
 COFFEE = coffee
+TSC=tsc
 LESSCSS=lessc
 SED=sed
 COMPILER=uglifyjs 
@@ -17,8 +18,14 @@ js/wordlist.js: src/wordlist.coffee
 	$(COFFEE) --compile --no-header --bare --output js/ $<
 	$(SED) -i -e '$$ s/;$$//' $@
 
-js/sat.js: src/sat.coffee
-	$(COFFEE) --compile --output js/ $<
+js/sat.js: src/sat.ts
+	$(TSC) $< --outDir js/ --module "commonjs"
+
+js/test_sat.js: src/test_sat.ts
+	$(TSC) $< --outDir js/ --module "commonjs"
+
+test: js/test_sat.js js/sat.js
+	node_modules/nodeunit/bin/nodeunit js/test_sat.js
 
 style.css: src/style.less
 	$(LESSCSS) $< $@
