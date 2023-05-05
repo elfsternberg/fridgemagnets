@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta name="Description" content="Put your description here." />
+        <base href="/" />
+
+        <style>
+            *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+                all: unset;
+                display: revert;
+            }
+
+            /* Preferred box-sizing value */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+                background-color: #ededed;
+            }
+         .container {
+             position: relative;
+             height: 100vh;
+             width: 100vw;
+             padding: 15%;
+             display: grid;
+             overflow: hidden;
+         }
+
+         word-tiles {
+             grid: 1fr / 1fr;
+             display: block;
+         }
+
+        </style>
+        <title>word-tiles</title>
+    </head>
+
+    <body>
+        <script type="module" src="./out-tsc/src/word-tiles.js"></script>
+        <div class="container">
+            <word-tiles src="./assets/wordlist.json"></word-tiles>
+        </div>
+    </body>
+</html>
